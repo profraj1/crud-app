@@ -7,7 +7,7 @@ export default function ModalDialog({showModal, handleCloseModal, editProduct, h
 
 
     return (
-        <div>
+        <>
             <Modal centered backdrop="static" keyboard="false" show={showModal} onHide={handleCloseModal} >
                 <ModalHeader closeButton>
                     {
@@ -59,6 +59,6 @@ export default function ModalDialog({showModal, handleCloseModal, editProduct, h
                 </ModalFooter>
             </Modal>
 
-        </div>
+        </>
     )
 }

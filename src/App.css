@@ -1,9 +1,9 @@
 .App {
   text-align: center;
+  background-color: #9E9CFB;
 }
 
 .error{
   text-decoration: solid;
   color: red;
 }
-

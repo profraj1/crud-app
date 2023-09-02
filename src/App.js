@@ -26,18 +26,25 @@ function App() {
     setErrorMsg('');
   }
 
+  const generateProductId =() =>{
+    const id = Math.floor(Math.random(100) * (100 - 1 + 1)) + 1;
+    return "P" + id;
+
+  }
+
   const handleInputChange = (type, value) => {
+    const id = generateProductId();
     if (type === "Name") {
-      addProButton ? setEditProduct({ ...editProduct, productId: productList.length + 1, productName: value })
+      addProButton ? setEditProduct({ ...editProduct, productId: id, productName: value })
         : setEditProduct({ ...editProduct, productName: value });
     }
     else if (type === "Qty") {
-      addProButton ? setEditProduct({ ...editProduct, productId: productList.length + 1, productQty: value })
+      addProButton ? setEditProduct({ ...editProduct, productId: id, productQty: value })
         : setEditProduct({ ...editProduct, productQty: value });
 
     }
     else if (type === "Price") {
-      addProButton ? setEditProduct({ ...editProduct, productId: productList.length + 1, productPrice: value })
+      addProButton ? setEditProduct({ ...editProduct, productId: id, productPrice: value })
         : setEditProduct({ ...editProduct, productPrice: value });
     }
   }
