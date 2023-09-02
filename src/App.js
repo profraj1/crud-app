@@ -76,8 +76,11 @@ function App() {
       return item;
     });
 
-    setProductList([...updatedList]);
-    handleCloseModal();
+    let error = validateUserInput();
+    if(!error){
+      setProductList([...updatedList]);
+      handleCloseModal();
+    }
   };
 
   const handleEdit = (item) => {
